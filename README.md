@@ -8,7 +8,7 @@ Simple etch a sketch project from The Odin Project.
 
 ## Screenshots
 
-![Project Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Project Screenshot](./screenshot.png)
 
 
 ## Features

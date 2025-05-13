@@ -5,6 +5,7 @@ container.className = "container";
 // Box
 const square = document.createElement("div");
 square.className = "square";
+square.setAttribute("draggable", "true");
 
 
 // Create Square Grid
@@ -25,11 +26,8 @@ createSquare(16);
 
 let squareHover = document.querySelectorAll(".square");
 
-console.log(squareHover.length);
 for (var i = 0; i < squareHover.length; i++) {
-    squareHover[i].addEventListener("mouseenter", function () {
+    squareHover[i].addEventListener("dragenter", function () {
         this.style.backgroundColor = "black";
-        console.log(i);
     });
 }
-

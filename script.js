@@ -14,7 +14,7 @@ document.getElementById("reset").addEventListener("click", () => {
 
     do {
         num = prompt("Enter grid size (1-100)", 16);
-    } while (isNaN(num) && (num <= 100));
+    } while (isNaN(num) || num < 1 || num > 100);
 
     createSquare(+num);
     changeSquareColor();

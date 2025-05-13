@@ -25,7 +25,7 @@ function createSquare(num) {
 createSquare(16);
 
 // Change color when mouse is dragged
-let changeSquareColor = document.querySelectorAll(".square");
+const changeSquareColor = document.querySelectorAll(".square");
 
 for (var i = 0; i < changeSquareColor.length; i++) {
     changeSquareColor[i].addEventListener("dragenter", function () {

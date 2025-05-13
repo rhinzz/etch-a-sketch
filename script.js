@@ -10,10 +10,20 @@ square.setAttribute("draggable", "true");
 
 document.getElementById("reset").addEventListener("click", () => {
     document.querySelectorAll(".row").forEach(e => e.remove());
-    let num = prompt("Enter grid size (1-100):", 16);
+    let num;
+
+    do {
+        num = prompt("Enter grid size (1-100)", 16);
+    } while (isNaN(num) && (num <= 100));
+
     createSquare(+num);
     changeSquareColor();
 });
+
+document.getElementById("random").addEventListener("click", () => {
+    randomizeSquareColor();
+});
+
 
 createSquare(16);
 changeSquareColor();
@@ -40,6 +50,20 @@ function changeSquareColor() {
     for (var i = 0; i < squareColor.length; i++) {
         squareColor[i].addEventListener("dragenter", function () {
             this.style.backgroundColor = "black";
+        });
+    }
+}
+
+// Randomize drag color
+function randomizeSquareColor() {
+    const squareColor = document.querySelectorAll(".square");
+
+    for (var i = 0; i < squareColor.length; i++) {
+        squareColor[i].addEventListener("dragenter", function () {
+            let red = Math.floor(Math.random() * 255) + 1;
+            let green = Math.floor(Math.random() * 255) + 1;
+            let blue = Math.floor(Math.random() * 255) + 1;
+            this.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
         });
     }
 }

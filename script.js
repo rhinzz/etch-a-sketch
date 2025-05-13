@@ -1,6 +1,6 @@
 // Container
-const container = document.getElementById("container");
-container.className = "container";
+const container = document.getElementById("squareContainer");
+container.className = "squareContainer";
 
 // Square
 const square = document.createElement("div");
@@ -8,12 +8,8 @@ square.className = "square";
 square.setAttribute("draggable", "true");
 
 
-let num = prompt("Enter size of the grid (1 - 100): ", 16);
-createSquare(+num);
-
-
 // Create Square Grid
-function createSquare(num) {
+function createSquare(num = 16) {
     for (let i = 0; i < num; i++) {
         const row = document.createElement("div");
         row.className = "row";
@@ -26,6 +22,8 @@ function createSquare(num) {
         container.appendChild(row.cloneNode(true));
     }
 }
+
+createSquare();
 
 // Change color when mouse is dragged
 const changeSquareColor = document.querySelectorAll(".square");

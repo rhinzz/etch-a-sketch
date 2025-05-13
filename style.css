@@ -15,7 +15,23 @@ body {
     align-items: center;
 }
 
-.container {
+.container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.buttonContainer button{
+    display: block;
+}
+
+.squareContainer {
     border: 1px solid black;
     width: 800px;
     height: 800px;

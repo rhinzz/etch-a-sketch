@@ -8,8 +8,18 @@ square.className = "square";
 square.setAttribute("draggable", "true");
 
 
+document.getElementById("reset").addEventListener("click", () => {
+    document.querySelectorAll(".row").forEach(e => e.remove());
+    let num = prompt("Enter grid size (1-100):", 16);
+    createSquare(+num);
+    changeSquareColor();
+});
+
+createSquare(16);
+changeSquareColor();
+
 // Create Square Grid
-function createSquare(num = 16) {
+function createSquare(num) {
     for (let i = 0; i < num; i++) {
         const row = document.createElement("div");
         row.className = "row";
@@ -23,13 +33,13 @@ function createSquare(num = 16) {
     }
 }
 
-createSquare();
-
 // Change color when mouse is dragged
-const changeSquareColor = document.querySelectorAll(".square");
+function changeSquareColor() {
+    const squareColor = document.querySelectorAll(".square");
 
-for (var i = 0; i < changeSquareColor.length; i++) {
-    changeSquareColor[i].addEventListener("dragenter", function () {
-        this.style.backgroundColor = "black";
-    });
+    for (var i = 0; i < squareColor.length; i++) {
+        squareColor[i].addEventListener("dragenter", function () {
+            this.style.backgroundColor = "black";
+        });
+    }
 }

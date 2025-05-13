@@ -19,7 +19,7 @@ body {
 .container{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .buttonContainer{
@@ -43,6 +43,7 @@ body {
     background-color: white;
     border: 2px solid black;
     color: black;
+    cursor: pointer;
     transition: 0.1s ease-in-out;
 }
 
@@ -58,4 +59,9 @@ body {
 
 .square {
     border: 0.5px solid black;
+    cursor: url('./pencil-cursor.ico'), default;
+}
+
+.square:active{
+    cursor: url('./pencil-cursor.ico'), default;
 }

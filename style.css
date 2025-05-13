@@ -59,9 +59,9 @@ body {
 
 .square {
     border: 0.5px solid black;
-    cursor: url('./pencil-cursor.ico'), default;
+    cursor: url('./icon/pencil-cursor.ico'), default;
 }
 
 .square:active{
-    cursor: url('./pencil-cursor.ico'), default;
+    cursor: url('./icon/pencil-cursor.ico'), default;
 }

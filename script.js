@@ -2,7 +2,7 @@
 const container = document.getElementById("container");
 container.className = "container";
 
-// Box
+// Square
 const square = document.createElement("div");
 square.className = "square";
 square.setAttribute("draggable", "true");
@@ -24,10 +24,11 @@ function createSquare(num) {
 
 createSquare(16);
 
-let squareHover = document.querySelectorAll(".square");
+// Change color when mouse is dragged
+let changeSquareColor = document.querySelectorAll(".square");
 
-for (var i = 0; i < squareHover.length; i++) {
-    squareHover[i].addEventListener("dragenter", function () {
+for (var i = 0; i < changeSquareColor.length; i++) {
+    changeSquareColor[i].addEventListener("dragenter", function () {
         this.style.backgroundColor = "black";
     });
 }

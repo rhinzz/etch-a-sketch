@@ -23,3 +23,6 @@ Simple etch a sketch project from The Odin Project.
 - CSS
 - JS
 
+## Link
+
+https://rhinzz.github.io/etch-a-sketch/
